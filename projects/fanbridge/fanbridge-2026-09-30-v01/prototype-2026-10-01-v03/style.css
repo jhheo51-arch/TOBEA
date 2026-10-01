@@ -4,4 +4,3 @@
 @media(max-width:400px){header,main{padding-left:16px;padding-right:16px}header>.badge{font-size:11px}h1{font-size:29px}nav{gap:4px}nav button{font-size:12px;padding:10px 5px}.card{padding:18px}.choice{padding:12px 10px}.choice strong{font-size:13px}.card-heading h3{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .policy-image{display:block;width:100%;height:auto;border:1px solid var(--line)}.facilitator{margin-top:32px}.facilitator summary{cursor:pointer;min-height:48px;padding:10px 0;font-weight:700}.facilitator h3{margin-top:26px}#setup-error:not(:empty){color:#9d2828;border:1px solid #dcbcbc;padding:12px}#session .card{position:static}#session-status{color:var(--blue)}#stop{margin-top:18px}#done{margin-top:28px}#done button{margin-top:18px}.check{align-items:flex-start}.check input{flex-shrink:0}#options .choice{font-size:16px}#prompt{font-size:18px;font-weight:700}.note:before{content:'적용 범위'}
-

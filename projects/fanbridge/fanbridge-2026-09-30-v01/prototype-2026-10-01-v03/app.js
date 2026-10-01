@@ -74,4 +74,3 @@ if(typeof document!=='undefined'){
  $('export').onclick=()=>download(JSON.stringify({schema:3,policy:POLICY,exportedAt:new Date().toISOString(),records},null,2),'application/json','json');$('csv').onclick=()=>download(csv(records),'text/csv;charset=utf-8','csv');
  report();active=records.find(r=>r.status==='active')||null;if(active)session();
 }
-
