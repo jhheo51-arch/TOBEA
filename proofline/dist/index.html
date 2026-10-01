@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROOFLINE | 경험에서 첫 행동까지</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23243024'/%3E%3Ctext x='13' y='46' fill='%23fffefa' font-size='43' font-family='Georgia,serif' font-weight='bold'%3EP%3C/text%3E%3Ccircle cx='48' cy='45' r='5' fill='%23b5c38f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="PROOFLINE 처음으로"><span class="logo-mark">P<span class="logo-dot">.</span></span><span>PROOFLINE</span></a>
+    <nav aria-label="페이지 이동"><a href="#selfStart">나 혼자 체험</a><a href="#pilot">첫 고객 모집</a><a href="#studio">방향 카드</a><a href="#offer">첫 제안 동행</a></nav>
+    <a class="top-cta" href="#selfStart">내 이야기로 시작 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> STRENGTH TO DIRECTION · V11</p>
+        <h1 id="heroTitle">나의 이야기에서<br><em>다음 방향</em>으로.</h1>
+        <p class="hero-lead">한 사람의 경험에서 강점을 찾고 <strong>첫 제안 문구를 실제로 써보는 단계</strong>까지 함께합니다. 알린 뒤에는 반응을 기록해 다시 고칩니다.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#selfStart">내 이야기로 시작하기 <span aria-hidden="true">↗</span></a><button type="button" class="button button-outline" id="demoButton">가상 사례 보기</button><span>로그인 없이 · 이 브라우저에서만 저장</span></div>
+      </div>
+      <div class="hero-art" aria-label="이야기가 한 장의 방향 카드로 정리되는 모습">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-note note-one"><small>01 / STORY</small><strong>“이런 일을 해봤어요”</strong><span>경험 · 선택 기준</span></div>
+        <div class="float-note note-two"><small>02 / DIRECTION</small><strong>“여기부터 해볼게요”</strong><span>강점 가설 · 첫 행동</span></div>
+        <div class="result-card"><span class="result-card-label">YOUR DIRECTION</span><div class="result-card-icon" aria-hidden="true">✦</div><strong>나의 경험을<br>나의 강점으로,<br><i>다음 한 걸음으로.</i></strong><span class="result-card-bottom">PROOFLINE / 2026</span></div>
+        <span class="art-caption">FROM YOUR STORY → YOUR NEXT STEP</span>
+      </div>
+    </section>
+
+    <section class="studio self-section" id="selfStart" aria-labelledby="selfTitle">
+      <div class="studio-intro"><div><p class="section-kicker">START / MY STORY</p><h2 id="selfTitle">내 경험으로<br><em>직접 시작합니다.</em></h2></div><p>고민과 실제 경험을 적으면 한 장의 방향 카드 초안을 만듭니다. 강점과 방향은 본인이 적은 표현이며, 필요한 부분은 카드에서 다시 고칠 수 있습니다.</p></div>
+      <div class="layout">
+        <section class="panel" aria-labelledby="selfFormTitle">
+          <div class="panel-head"><span>INPUT / 나 혼자 체험</span><h2 id="selfFormTitle">여섯 가지를 적어주세요</h2></div>
+          <form id="selfForm">
+            <label for="selfName">이름 또는 가명</label><input id="selfName" name="selfName" maxlength="60" required placeholder="실명 대신 가명을 써도 됩니다">
+            <label for="selfChallenge">지금 막히는 점</label><textarea id="selfChallenge" name="selfChallenge" rows="2" maxlength="500" required placeholder="예: 제 경험을 누구에게 어떻게 소개할지 모르겠어요"></textarea>
+            <label for="selfExperience">직접 해본 일 한 가지</label><textarea id="selfExperience" name="selfExperience" rows="3" maxlength="500" required placeholder="언제, 누구에게, 어떤 행동을 했는지 적어주세요"></textarea>
+            <label for="selfStrength">그때 내가 잘했다고 생각하는 행동</label><input id="selfStrength" name="selfStrength" maxlength="160" required placeholder="예: 상대 이야기를 듣고 선택지를 정리하기">
+            <label for="selfAudience">이 경험으로 도와보고 싶은 사람</label><input id="selfAudience" name="selfAudience" maxlength="180" required placeholder="예: 진로 방향이 막막한 대학생">
+            <label for="selfActivity">작게 해볼 도움이나 활동</label><input id="selfActivity" name="selfActivity" maxlength="220" required placeholder="예: 20분 동안 장점과 선택지 함께 정리하기">
+            <button type="submit" class="button button-dark">내 방향 카드 초안 보기</button>
+          </form>
+          <p id="selfStatus" class="status" role="status" aria-live="polite"></p>
+          <p class="small">이 초안은 내가 입력한 말을 정리한 것이며, 강점이나 수요를 자동으로 검증하지 않습니다. 내용은 이 브라우저에만 저장됩니다.</p>
+        </section>
+        <section class="panel result-panel self-guide" aria-labelledby="selfGuideTitle">
+          <div class="panel-head"><span>HOW IT WORKS / 다음 순서</span><h2 id="selfGuideTitle">카드를 만든 뒤 해볼 일</h2></div>
+          <ol><li>카드의 강점과 근거가 내 경험에 맞는지 고칩니다.</li><li>도울 사람의 불편을 확인하고 첫 제안 문구를 만듭니다.</li><li>직접 한 번 알린 뒤 실제 반응을 기록합니다.</li></ol>
+          <p>가상의 박다은 이야기는 상단 <strong>가상 사례 보기</strong>에서 따로 볼 수 있습니다.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="studio pilot-section" id="pilot" aria-labelledby="pilotTitle">
+      <div class="studio-intro"><div><p class="section-kicker">00 / FIRST CUSTOMER</p><h2 id="pilotTitle">첫 고객을<br><em>직접 만나봅니다.</em></h2></div><p>PROOFLINE이 실제로 도움이 되는지 알려면 가상 사례 다음에는 진짜 한 사람의 경험과 행동이 필요합니다. 무료 시범의 범위와 기록 동의를 먼저 확인하고, 상담부터 첫 제안·반응까지 이어갑니다.</p></div>
+      <div class="layout">
+        <section class="panel" aria-labelledby="inviteTitle">
+          <div class="panel-head"><span>INVITE / 모집 문구</span><h2 id="inviteTitle">한 사람에게 먼저 전할 말</h2></div>
+          <p class="offer-help">지인에게 직접 보내거나, 채널을 정한 뒤 그곳의 규칙에 맞춰 수정해 쓰는 초안입니다. 버튼은 문구만 복사하며 메시지를 보내지는 않습니다.</p>
+          <label for="inviteText" class="pilot-label">무료 시범 안내 문구</label>
+          <textarea id="inviteText" rows="10" readonly>자신의 경험을 어떻게 소개하고 누구에게 도움을 제안할지 고민 중이신가요? PROOFLINE 무료 시범에서 약 45분간 이야기를 듣고, 강점의 근거와 첫 제안 문구를 함께 정리합니다. 원하시면 직접 한 번 알려본 뒤 7~14일 안에 반응을 함께 돌아봅니다. 참여와 게시 여부, 기록·공개 범위는 본인이 정합니다. 문의나 판매를 보장하지 않습니다. 관심이 있으시면 지금 막힌 점 한 가지를 알려주세요.</textarea>
+          <div class="form-controls"><button type="button" class="button button-dark" id="copyInviteButton">모집 문구 복사</button></div>
+          <p class="small">모집 채널과 실제 연락할 사람이 아직 정해지지 않았습니다. 이 페이지는 외부에 신청을 받거나 메시지를 자동 발송하지 않습니다.</p>
+        </section>
+        <section class="panel result-panel" aria-labelledby="candidateTitle">
+          <div class="panel-head"><span>INTAKE / 실제 참여자</span><h2 id="candidateTitle">첫 상담 후보를 기록합니다</h2></div>
+          <p class="offer-help">실제로 참여 의사를 밝힌 사람이 생겼을 때만 적습니다. 연락처 대신 가명을 쓰고 연락은 원래 대화한 채널에서 이어가세요.</p>
+          <form id="candidateForm">
+            <label for="candidateAlias">이름 또는 가명</label><input id="candidateAlias" name="candidateAlias" maxlength="60" required placeholder="예: 첫 시범 참여자 A">
+            <label for="candidateChallenge">현재 알리거나 제안할 때 막히는 점</label><textarea id="candidateChallenge" name="candidateChallenge" rows="3" maxlength="500" required></textarea>
+            <label for="candidateExample">직접 해본 일 한 가지</label><textarea id="candidateExample" name="candidateExample" rows="3" maxlength="500" required></textarea>
+            <label for="candidateSource">어디서 참여 의사를 확인했나요?</label><select id="candidateSource" name="candidateSource" required><option value="">선택해 주세요</option><option value="지인 직접 대화">지인 직접 대화</option><option value="SNS">SNS</option><option value="온라인 커뮤니티">온라인 커뮤니티</option><option value="기타">기타</option></select>
+            <label class="consent-line" for="candidateConsent"><input id="candidateConsent" name="candidateConsent" type="checkbox" required>참여자에게 기록 목적과 이 기기 보관 방식을 설명하고 동의를 확인했습니다.</label>
+            <button type="submit" class="button button-dark">상담 후보 저장</button>
+          </form>
+          <p id="candidateStatus" class="status" role="status" aria-live="polite"></p>
+          <div id="candidateList" class="candidate-list"></div>
+        </section>
+      </div>
+      <article id="fictionalJourney" class="fictional-journey" aria-labelledby="fictionalJourneyTitle" hidden>
+        <div><span class="eyebrow">FICTIONAL / 가상 첫 고객 시연</span><h3 id="fictionalJourneyTitle">박다은의 첫 제안 동행</h3><p>아래 대화와 게시·반응은 모두 창작한 예시입니다. 실제 참여자나 성과가 아닙니다.</p></div>
+        <ol>
+          <li><strong>모집글에 답장</strong><span>“도서관에서 모바일 예약을 설명한 경험이 있는데, 이걸 다른 사람에게 어떻게 소개해야 할지 모르겠어요.”</span></li>
+          <li><strong>상담과 기록 동의</strong><span>가명으로 경험을 기록하고 외부 공개는 하지 않기로 한 상황을 가정했습니다. 실제 사람의 동의를 받은 사실은 없습니다.</span></li>
+          <li><strong>첫 제안 실행</strong><span>‘예약 절차 안내’ 문구를 가상의 커뮤니티에 올렸다고 가정했습니다. 복사·저장 버튼을 누른 것만으로 실행되지는 않습니다.</span></li>
+          <li><strong>반응 후 수정</strong><span>가상 반응 2건에서 인증 문자 단계의 어려움이 드러나, 제안을 그 한 단계로 좁혔습니다.</span></li>
+        </ol>
+        <button type="button" class="button button-dark" id="viewFictionalRecordButton">가상 방향 카드와 제안 보기</button>
+      </article>
+    </section>
+
+    <section class="studio" id="studio">
+      <div class="studio-intro"><div><p class="section-kicker">01 / THE STUDIO</p><h2>듣고, 정하고,<br><em>시험하고 다시 고칩니다.</em></h2></div><p>첫 고객 후보에서 ‘상담 시작’을 누르면 그분의 고민과 경험이 아래에 들어옵니다. 강점과 방향은 대화하면서 확인합니다. 가상 사례도 따로 볼 수 있습니다.</p></div>
+      <div class="layout">
+        <section class="panel" aria-labelledby="inputTitle">
+          <div class="panel-head"><span>INPUT / 상담 기록</span><h2 id="inputTitle">이야기부터 시작합니다</h2></div>
+          <div class="step-nav" aria-label="기록 단계"><button type="button" class="step-button is-active" id="storyStep">1. 이야기</button><button type="button" class="step-button" id="directionStep">2. 강점·방향</button><button type="button" class="step-button" id="followupStep">3. 해본 뒤</button></div>
+          <form id="intakeForm">
+            <fieldset class="stage" id="storyStage">
+              <legend>01. 먼저 들려주세요</legend>
+              <p class="small">강점이나 진로를 아직 몰라도 괜찮습니다. 지금 떠오르는 경험만 적어주세요.</p>
+              <label for="name">이름 또는 가명</label><input id="name" name="name" maxlength="60" required placeholder="실명 대신 가명을 써도 됩니다">
+              <label for="story">지금 고민하는 일은 무엇인가요?</label><textarea id="story" name="story" rows="3" maxlength="500" required placeholder="예: 내가 잘하는 일을 앞으로 어떻게 살릴지 고민입니다"></textarea>
+              <label for="evidence">최근 직접 해본 일 한 가지는요?</label><textarea id="evidence" name="evidence" rows="3" maxlength="500" required placeholder="누구를 어떻게 도왔는지 실제 장면을 적어주세요"></textarea>
+              <label for="preference">앞으로 중요하게 여기는 조건은요? (선택)</label><input id="preference" name="preference" maxlength="180" placeholder="예: 사람을 직접 돕는 일, 규칙적인 일정">
+            </fieldset>
+
+            <fieldset class="stage" id="directionStage" hidden>
+              <legend>02. 강점과 방향을 정리합니다</legend>
+              <p class="small">아래 내용은 경험을 바탕으로 한 초안입니다. 실제로 맞는지 확인하면서 고쳐주세요.</p>
+              <label for="strength1">강점 가설 1</label><input id="strength1" name="strength1" maxlength="160" required>
+              <label for="proof1">그렇게 본 근거 1</label><textarea id="proof1" name="proof1" rows="2" maxlength="350" required></textarea>
+              <label for="strength2">강점 가설 2</label><input id="strength2" name="strength2" maxlength="160">
+              <label for="proof2">그렇게 본 근거 2</label><textarea id="proof2" name="proof2" rows="2" maxlength="350"></textarea>
+              <label for="strengthFeedback">이 강점 해석에 대한 본인의 반응</label><select id="strengthFeedback" name="strengthFeedback"><option value="pending">아직 확인 전</option><option value="agree">동의함</option><option value="revise">수정이 필요함</option></select>
+              <label for="audience">도움받을 수 있는 사람</label><input id="audience" name="audience" maxlength="180" placeholder="예: 디지털 예약이 어려운 분">
+              <label for="context">관련 사회·산업 흐름</label><textarea id="context" name="context" rows="2" maxlength="350" placeholder="자료로 확인한 변화만 적어주세요"></textarea>
+              <label for="sourceTitle">자료 이름</label><input id="sourceTitle" name="sourceTitle" maxlength="180" placeholder="예: 기관명·자료명">
+              <label for="sourceUrl">자료 주소</label><input id="sourceUrl" name="sourceUrl" type="url" maxlength="400" placeholder="https://">
+              <label for="checkedAt">자료 확인 날짜</label><input id="checkedAt" name="checkedAt" type="date">
+              <p class="small">자료 이름·주소·날짜가 모두 있어야 카드에 흐름을 표시합니다. 빠지면 ‘조사 전’으로 나옵니다.</p>
+              <label for="directionA">가능한 방향 1</label><input id="directionA" name="directionA" maxlength="220" required>
+              <label for="reasonA">왜 이 방향인가요?</label><textarea id="reasonA" name="reasonA" rows="2" maxlength="350" required></textarea>
+              <label for="directionB">가능한 방향 2</label><input id="directionB" name="directionB" maxlength="220">
+              <label for="reasonB">두 번째 방향의 이유</label><textarea id="reasonB" name="reasonB" rows="2" maxlength="350"></textarea>
+              <label for="chosen">본인이 고른 첫 방향</label><select id="chosen" name="chosen"><option value="A">방향 1</option><option value="B">방향 2</option><option value="pending">아직 선택 전</option></select>
+              <label for="intro">20초 자기소개 초안</label><textarea id="intro" name="intro" rows="3" maxlength="400" placeholder="상담자가 함께 고쳐 적습니다"></textarea>
+              <label for="firstActivity">첫 활동 또는 작은 서비스</label><input id="firstActivity" name="firstActivity" maxlength="220" placeholder="판매가 목적이 아니면 작은 프로젝트도 됩니다">
+              <label for="contentIdea">처음 알릴 이야기</label><textarea id="contentIdea" name="contentIdea" rows="2" maxlength="350"></textarea>
+              <label for="firstStep">가장 작은 첫 행동</label><input id="firstStep" name="firstStep" maxlength="220" required placeholder="예: 안내문을 만들고 1명에게 보여주기">
+              <label for="validationQuestion">상대에게 확인할 질문</label><input id="validationQuestion" name="validationQuestion" maxlength="250">
+              <label for="reviewAt">첫 행동을 돌아볼 날짜 (선택)</label><input id="reviewAt" name="reviewAt" type="date"><p class="small">알림은 보내지 않습니다. 이 브라우저의 기록에서 날짜를 확인할 수 있습니다.</p>
+            </fieldset>
+
+            <fieldset class="stage" id="followupStage" hidden>
+              <legend>03. 방향 카드의 첫 행동 돌아보기</legend>
+              <p class="small">위 카드에서 정한 첫 행동을 돌아봅니다. 실제 게시·제안과 문의는 아래 ‘첫 제안 동행’에 기록합니다.</p>
+              <label for="actionStatus">첫 행동 상태</label><select id="actionStatus" name="actionStatus"><option value="planned">아직 해보기 전</option><option value="done">해봤음</option><option value="delayed">아직 못 했음</option></select>
+              <label for="actionDone">실제로 한 행동</label><textarea id="actionDone" name="actionDone" rows="2" maxlength="350"></textarea>
+              <label for="reaction">상대의 반응</label><textarea id="reaction" name="reaction" rows="2" maxlength="350"></textarea>
+              <label for="revision">무엇을 수정했나요?</label><textarea id="revision" name="revision" rows="2" maxlength="350"></textarea>
+              <label for="nextStep">다음에 해볼 일</label><input id="nextStep" name="nextStep" maxlength="220">
+            </fieldset>
+            <div class="form-controls"><button type="submit" class="button button-dark" id="saveButton">이야기 저장</button><button type="button" class="button button-outline" id="nextButton">강점·방향 정리하기</button><button type="button" class="button button-quiet" id="newButton">새 기록 시작</button></div>
+          </form>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="resultTitle">
+          <div class="panel-head"><span>OUTPUT / 한 장 방향 카드</span><h2 id="resultTitle">이용자에게 이렇게 보여줍니다</h2></div>
+          <div id="empty" class="empty">위에서 내 이야기를 적으면 방향 카드 초안이 이곳에 나타납니다.<br><a href="fictional-pilot-v09.txt">가상 사례를 글로 보기</a></div>
+          <div id="output" hidden>
+            <div class="version-bar" id="versionBar" aria-label="카드 버전"></div>
+            <article class="card">
+              <div class="card-top"><span id="cardTag"></span><span id="cardDate"></span></div>
+              <h3 id="cardName"></h3>
+              <div class="card-block"><span>들은 이야기</span><small class="provenance">본인 진술 · 사실 확인 전</small><p id="cardStory"></p></div>
+              <div class="card-block"><span>직접 해본 일</span><small class="provenance">본인 진술 · 사실 확인 전</small><p id="cardEvidence"></p></div>
+              <div class="card-block emphasis"><span>강점 가설</span><small class="provenance" id="strengthProvenance">상담자의 해석 · 본인과 확인</small><div id="cardStrengths"></div><small id="cardStrengthFeedback"></small></div>
+              <div class="card-block"><span>중요한 조건과 도울 사람</span><p id="cardPreference"></p><p id="cardAudience"></p></div>
+              <div class="card-block"><span>사회·산업 흐름</span><small class="provenance">외부 자료 · 입력된 출처와 날짜</small><p id="cardContext"></p><a id="cardSource" target="_blank" rel="noopener noreferrer" hidden></a><small id="cardSourceNote"></small></div>
+              <div class="card-block"><span>가능한 방향과 이유</span><small class="provenance" id="directionProvenance">상담자의 제안 · 적합성은 행동으로 확인</small><div id="cardDirections"></div></div>
+              <div class="card-block"><span>본인이 고른 방향</span><p id="cardChosen"></p></div>
+              <div class="card-block"><span>20초 자기소개</span><p id="cardIntro"></p></div>
+              <div class="card-block"><span>첫 활동 또는 작은 서비스</span><p id="cardActivity"></p></div>
+              <div class="card-block"><span>처음 알릴 이야기</span><p id="cardContent"></p></div>
+              <div class="card-block"><span>첫 행동과 확인할 반응</span><p id="cardFirstStep"></p><p id="cardQuestion"></p><p id="cardReviewAt"></p></div>
+              <div class="card-block followup" id="followupBlock" hidden><span>해본 뒤 기록한 반응</span><small class="provenance">본인 기록 · 실제 반응과 해석을 구분해 작성</small><p id="cardActionStatus"></p><p id="cardAction"></p><p id="cardReaction"></p><p id="cardRevision"></p><p id="cardNextStep"></p></div>
+              <p class="card-note" id="cardNote">입력과 상담자가 작성한 초안을 정리한 결과입니다. 진로·사업 성과를 보장하지 않습니다.</p>
+            </article>
+            <div class="output-actions"><button type="button" class="button button-dark" id="toOfferButton">첫 제안 만들기</button><button type="button" class="button button-outline" id="followupCta">첫 행동 결과 기록</button><button type="button" class="button button-outline" id="copyButton">카드 복사</button><button type="button" class="button button-outline" id="downloadButton">이 카드 저장</button><button type="button" class="button button-outline" id="downloadHistoryButton">전체 이력 저장</button><button type="button" class="button button-quiet" id="deleteButton">이 기록 삭제</button></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="studio offer-section" id="offer" aria-labelledby="offerTitle">
+      <div class="studio-intro"><div><p class="section-kicker">02 / FIRST OFFER</p><h2 id="offerTitle">좋은 방향을<br><em>실제 제안으로.</em></h2></div><p>왼쪽에서 한 사람에게 전할 제안을 만들고, 오른쪽에서 게시·제안 여부와 받은 반응을 확인합니다. 복사만으로는 실행으로 표시하지 않습니다.</p></div>
+      <p id="offerStatus" class="status" role="status" aria-live="polite"></p>
+      <div class="layout">
+        <section class="panel" aria-labelledby="offerInputTitle">
+          <div class="panel-head"><span>INPUT / 첫 제안 설계</span><h2 id="offerInputTitle">누구에게 무엇을 제안하나요?</h2></div>
+          <p class="small offer-help">위에서 방향 카드를 저장한 다음 시작합니다. 문구와 공개 범위를 직접 확인하고, 알릴 곳을 선택해 주세요.</p>
+          <form id="offerForm">
+            <label for="offerAudience">먼저 도울 사람 한 부류</label><input id="offerAudience" name="offerAudience" maxlength="160" required placeholder="예: 모바일 예약이 낯선 사람">
+            <label for="offerProblem">그 사람이 겪는 구체적인 불편</label><textarea id="offerProblem" name="offerProblem" rows="2" maxlength="300" required placeholder="추측이라면 먼저 대화로 확인해 주세요"></textarea>
+            <label for="offerPromise">내가 도울 수 있는 변화</label><input id="offerPromise" name="offerPromise" maxlength="220" required placeholder="성과를 보장하는 표현은 피해주세요">
+            <label for="offerSmall">작게 제안할 활동</label><input id="offerSmall" name="offerSmall" maxlength="220" required placeholder="예: 10분 안내와 한 장 설명문">
+            <label for="offerChannel">처음 알릴 곳 한 곳</label><select id="offerChannel" name="offerChannel" required><option value="">선택해 주세요</option><option value="직접 대화">직접 대화</option><option value="온라인 커뮤니티">온라인 커뮤니티</option><option value="SNS 게시글">SNS 게시글</option><option value="이메일">이메일</option><option value="기타">기타</option></select>
+            <label for="offerCta">상대에게 부탁할 한 가지 행동</label><input id="offerCta" name="offerCta" maxlength="180" required placeholder="예: 어려웠던 화면을 알려주세요">
+            <label for="offerMessage">실제로 전할 소개·제안 문구</label><textarea id="offerMessage" name="offerMessage" rows="7" maxlength="900" required></textarea>
+            <div class="form-controls"><button type="button" class="button button-outline" id="draftOfferButton">카드 내용으로 초안 만들기</button><button type="submit" class="button button-dark">제안 문구 저장</button></div>
+          </form>
+        </section>
+        <section class="panel result-panel" aria-labelledby="offerOutputTitle">
+          <div class="panel-head"><span>OUTPUT / 실행과 반응</span><h2 id="offerOutputTitle">제안 이후까지 기록합니다</h2></div>
+          <div id="offerEmpty" class="offer-empty">방향 카드를 저장한 뒤 첫 제안 문구를 만들어 주세요.</div>
+          <div id="offerOutput" hidden>
+            <div class="version-bar" id="offerVersionBar" aria-label="제안 문구 버전"></div>
+            <article class="card offer-paper">
+              <div class="card-top"><span id="offerTag">첫 제안</span><span id="offerDate"></span></div>
+              <h3 id="offerFor"></h3>
+              <div class="card-block"><span>도울 사람의 불편</span><p id="offerProblemView"></p></div>
+              <div class="card-block"><span>작은 제안</span><p id="offerPromiseView"></p><p id="offerSmallView"></p></div>
+              <div class="card-block emphasis"><span>바로 쓸 문구</span><p id="offerMessageView"></p></div>
+              <div class="card-block"><span>알릴 곳과 요청할 행동</span><p id="offerChannelView"></p><p id="offerCtaView"></p></div>
+              <p class="card-note">문구를 저장하거나 복사해도 실제로 알린 것으로 기록되지 않습니다. 게시·제안은 선택한 곳에서 직접 합니다.</p>
+            </article>
+            <div class="output-actions"><button type="button" class="button button-dark" id="copyOfferButton">제안 문구 복사</button><button type="button" class="button button-outline" id="downloadPilotButton">전체 시범 기록 저장</button></div>
+            <form id="attemptForm">
+              <fieldset class="stage"><legend>알린 뒤 기록</legend>
+                <p class="small">실제 게시·제안 뒤에만 작성합니다. 반응이 아직 없으면 비워두고 나중에 같은 기록을 수정할 수 있습니다.</p>
+                <label for="attemptDate">게시·제안한 날짜</label><input id="attemptDate" name="attemptDate" type="date" required>
+                <label for="attemptPlace">어디에 또는 누구에게 알렸나요?</label><input id="attemptPlace" name="attemptPlace" maxlength="180" required placeholder="개인정보 대신 채널이나 가명을 적어도 됩니다">
+                <label for="attemptUrl">게시 주소 (있으면)</label><input id="attemptUrl" name="attemptUrl" type="url" maxlength="400" placeholder="https://">
+                <label for="ownerUnderstanding">제안을 자기 말로 설명할 수 있나요?</label><select id="ownerUnderstanding" name="ownerUnderstanding"><option value="unknown">아직 확인 전</option><option value="yes">네</option><option value="no">아니요, 수정 필요</option></select>
+                <label for="replyCount">받은 반응 수 (확인했다면)</label><input id="replyCount" name="replyCount" type="number" min="0" max="9999" placeholder="미확인이면 비워두세요">
+                <label for="inquiryCount">실제 문의 수 (확인했다면)</label><input id="inquiryCount" name="inquiryCount" type="number" min="0" max="9999" placeholder="미확인이면 비워두세요">
+                <label for="attemptReaction">실제로 들은 말·반응</label><textarea id="attemptReaction" name="attemptReaction" rows="2" maxlength="400"></textarea>
+                <label for="attemptLearning">그 반응에서 배운 점</label><textarea id="attemptLearning" name="attemptLearning" rows="2" maxlength="400"></textarea>
+                <label for="attemptNext">다음에 바꿀 점</label><input id="attemptNext" name="attemptNext" maxlength="220">
+                <label for="workMinutes">상담·제작·수정에 쓴 시간 (분)</label><input id="workMinutes" name="workMinutes" type="number" min="0" max="9999" placeholder="운영자가 쓴 시간을 적어주세요">
+                <label class="consent-line" for="ownerApproved"><input id="ownerApproved" name="ownerApproved" type="checkbox" required>문구와 공개 범위를 직접 검토하고 동의했습니다.</label>
+                <div class="form-controls"><button type="submit" class="button button-dark" id="attemptSaveButton">실행 기록 저장</button><button type="button" class="button button-quiet" id="newAttemptButton">새 실행 기록</button></div>
+              </fieldset>
+            </form>
+            <div class="card-block"><span>실행·반응 이력</span><div id="attemptList"></div></div>
+          </div>
+        </section>
+      </div>
+      <div class="pilot-summary" aria-labelledby="pilotSummaryTitle"><div><span class="eyebrow">PILOT / 실사용 기록</span><h3 id="pilotSummaryTitle">시범 운영 현황</h3><p>가상 사례는 숫자에 포함하지 않습니다. 반응 미확인은 0건으로 계산하지 않습니다.</p></div><div id="pilotNumbers" class="pilot-numbers"></div></div>
+    </section>
+
+    <section id="records" class="records" aria-labelledby="recordsTitle">
+      <div class="records-heading"><div><span class="eyebrow">03 / SAVED WORK</span><h2 id="recordsTitle">이 브라우저의 기록</h2></div><p>첫 행동을 돌아볼 날짜와 수정 이력을 다시 확인할 수 있습니다. 알림은 보내지 않습니다.</p></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="recordList" class="record-list"></div>
+    </section>
+  </main>
+  <footer><div class="footer-logo">P<span>.</span> <small>PROOFLINE</small></div><p>경험에서 강점을, 강점에서 다음 행동을.</p><span>가상 사례 시연 · 이 기기에서만 저장</span></footer>
+</body>
+</html>

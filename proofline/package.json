@@ -1,0 +1,1 @@
+{"name":"proofline","version":"0.11.0","private":true,"scripts":{"test":"node check.cjs"},"engines":{"node":">=22"}}
