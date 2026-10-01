@@ -1,0 +1,1 @@
+{"name":"product-improvement-lab","version":"0.3.0","private":true,"type":"module","scripts":{"start":"node server.mjs","test":"node --test test.mjs agent.test.mjs"},"engines":{"node":">=24"}}
