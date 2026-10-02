@@ -1,15 +1,15 @@
 # 뭐라카노
 
-개인 영어 말하기 연습 프로젝트입니다. 현재 실행 버전은 [mworakano-2026-10-02-v05](mworakano-2026-10-02-v05/README.md)입니다.
+개인 영어 말하기 연습 프로젝트입니다. 현재 실행 버전은 [mworakano-2026-10-02-v06](mworakano-2026-10-02-v06/README.md)입니다.
 
-- [기획서](mworakano-2026-10-02-v05/PRD.md)
-- [Claude 개발 인계](mworakano-2026-10-02-v05/CLAUDE.md)
-- [휴대폰 접속 준비](mworakano-2026-10-02-v05/MOBILE.md)
+- [기획서](mworakano-2026-10-02-v06/PRD.md)
+- [Claude 개발 인계](mworakano-2026-10-02-v06/CLAUDE.md)
+- [휴대폰 접속 준비](mworakano-2026-10-02-v06/MOBILE.md)
 
 저장소 루트에서 실행:
 
 ```sh
-cd project/mworakano/mworakano-2026-10-02-v05
+cd project/mworakano/mworakano-2026-10-02-v06
 npm test
 npm start
 ```
