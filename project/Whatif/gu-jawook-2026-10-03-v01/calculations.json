@@ -1,0 +1,45 @@
+{
+  "scope": "2024 full regular season; 2026 retrieved season-to-date, not pre-play snapshots",
+  "rows": [
+    {
+      "player": "구자욱",
+      "year": 2024,
+      "AVG_calculated": 0.34279918864097364,
+      "SLG_calculated": 0.6267748478701826,
+      "OPS_from_published_rounded_rates": 1.044,
+      "HR_per_100_PA": 5.809859154929577,
+      "BB_per_100_PA": 9.683098591549296,
+      "observed_PA_per_appearance": 4.403100775193798
+    },
+    {
+      "player": "구자욱",
+      "year": 2026,
+      "AVG_calculated": 0.37142857142857144,
+      "SLG_calculated": 0.580952380952381,
+      "OPS_from_published_rounded_rates": 1.039,
+      "HR_per_100_PA": 3.0181086519114686,
+      "BB_per_100_PA": 13.279678068410464,
+      "observed_PA_per_appearance": 4.359649122807017
+    },
+    {
+      "player": "김헌곤",
+      "year": 2026,
+      "AVG_calculated": 0.2765957446808511,
+      "SLG_calculated": 0.3617021276595745,
+      "OPS_from_published_rounded_rates": 0.679,
+      "HR_per_100_PA": 0.9900990099009901,
+      "BB_per_100_PA": 5.9405940594059405,
+      "observed_PA_per_appearance": 1.3116883116883118
+    }
+  ],
+  "gu_2026_minus_2024": {
+    "OBP_points": 0.041000000000000036,
+    "SLG_points": -0.04600000000000004,
+    "OPS_points": -0.0050000000000001155
+  },
+  "gu_minus_kim_2026": {
+    "OBP_percentage_points": 14.100000000000001,
+    "OPS_points": 0.3599999999999999,
+    "warning": "Descriptive gap only; not causal runs lost or a future projection."
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 활용의 아홉 문</title>
+  <style>
+    :root{--ink:#17251f;--paper:#f6f1e4;--paper-deep:#ece3cc;--jade:#087f74;--jade-dark:#07594f;--gold:#c79a32;--coral:#d95b42;--blue:#146da2;--rule:#c7b99b;--muted:#5c655c;--sans:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;--serif:'Batang','Times New Roman',serif}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:var(--sans);background:radial-gradient(circle at 20% 10%,#fffdf5 0,transparent 24rem),var(--paper)}main{max-width:1450px;margin:0 auto;padding:45px 30px 42px}.kicker{text-align:center;color:var(--jade-dark);font-size:12px;font-weight:800;letter-spacing:.15em}.kicker::before,.kicker::after{content:'✦';padding:0 12px;color:var(--gold)}h1{margin:10px 0 9px;text-align:center;font:700 clamp(35px,5vw,61px)/1.08 var(--serif);letter-spacing:-.06em}.intro{max-width:800px;margin:0 auto 25px;text-align:center;color:var(--muted);font-size:16px;line-height:1.75}.hero{position:relative;min-height:230px;overflow:hidden;border:9px solid var(--jade-dark);border-radius:10px;background:#0c554d url('./palace-gate-reference.png') center 38%/cover no-repeat;box-shadow:0 8px 0 var(--gold),0 15px 30px #2d35241c}.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#062a26d9 0%,#062a2680 45%,#062a26ba 100%)}.hero-copy{position:relative;z-index:1;max-width:670px;padding:42px 52px;color:#fff}.hero-copy .tiny{margin:0;color:#f8d26c;font-size:12px;font-weight:800;letter-spacing:.13em}.hero-copy h2{margin:9px 0 12px;font:700 clamp(27px,3vw,42px)/1.15 var(--serif)}.hero-copy p{margin:0;font-size:15px;line-height:1.7;color:#f8f6eb}.legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:38px 0 18px;font-size:13px;color:var(--muted)}.legend strong{color:var(--jade-dark)}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}.wrap{overflow-x:auto;padding:9px 3px 5px}.journey{position:relative;display:grid;grid-template-columns:repeat(5,240px);grid-template-rows:215px 215px;gap:62px 30px;min-width:1320px;padding:20px 0 35px}.gate{position:relative;min-height:215px;padding:50px 24px 22px;border:5px solid var(--gate);border-radius:5px 5px 10px 10px;background:linear-gradient(110deg,#fffdf8,#f5edda);clip-path:polygon(0 100%,0 13%,7% 0,93% 0,100% 13%,100% 100%);box-shadow:inset 0 0 0 3px #fff8,0 7px 0 color-mix(in srgb,var(--gate) 28%,transparent);text-align:center}.gate::before{content:'';position:absolute;z-index:-1;inset:5px 5px auto;height:42px;background:linear-gradient(#0b5a53a8,#0b5a53a8),url('./palace-gate-reference.png') center 25%/330px auto}.gate::after{content:'';position:absolute;z-index:-1;left:50%;bottom:14px;width:46px;height:4px;transform:translateX(-50%);background:var(--gold);border-radius:2px}.num{display:block;margin-bottom:11px;color:var(--gate);font-size:12px;font-weight:900;letter-spacing:.12em}.gate h3{margin:0 0 11px;font-size:21px;letter-spacing:-.05em}.gate p{margin:0;color:#536057;font-size:13px;line-height:1.58}.gate p+small{display:block;margin-top:10px;color:var(--gate);font-size:11px;font-weight:800;letter-spacing:.02em}.g1{--gate:#2878cb;grid-column:1;grid-row:1}.g2{--gate:#20a884;grid-column:2;grid-row:1}.g3{--gate:#c7951c;grid-column:3;grid-row:1}.g4{--gate:#9472c8;grid-column:4;grid-row:1}.g5{--gate:#d55e42;grid-column:5;grid-row:1}.g6{--gate:#20a884;grid-column:5;grid-row:2}.g7{--gate:#2878cb;grid-column:4;grid-row:2}.g8{--gate:#d55e42;grid-column:3;grid-row:2}.g9{--gate:#c7951c;grid-column:2;grid-row:2}.connector{position:absolute;z-index:-2;border-color:#71817a;border-style:dotted}.c1,.c2,.c3,.c4{top:125px;width:30px;border-top-width:3px}.c1{left:240px}.c2{left:510px}.c3{left:780px}.c4{left:1050px}.c5{right:-14px;top:125px;width:50px;height:277px;border-width:3px 3px 3px 0;border-radius:0 22px 22px 0}.c6,.c7,.c8{top:402px;width:30px;border-top-width:3px}.c6{left:1050px}.c7{left:780px}.c8{left:510px}.loop{position:absolute;left:14px;bottom:0;color:var(--jade);font-size:12px;font-weight:800}.loop::before{content:'';position:absolute;right:calc(100% + 12px);bottom:1px;width:78px;height:320px;border:4px solid var(--jade);border-right:0;border-bottom:0;border-radius:20px 0 0 0}.principles{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px;margin-top:25px}.card{padding:20px;border:1px solid var(--rule);border-top:5px solid var(--jade);border-radius:7px;background:#fffdf7}.card:nth-child(2){border-top-color:var(--coral)}.card:nth-child(3){border-top-color:var(--gold)}.card h2{margin:0 0 10px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}.footer{margin:26px 0 0;padding-top:14px;border-top:1px solid var(--rule);color:#778077;font-size:11px;line-height:1.6}@media(max-width:700px){main{padding:32px 16px}.hero-copy{padding:31px 25px}.intro{font-size:14px}.principles{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">PROJECT START REFERENCE</p>
+    <h1>AI 활용의 아홉 문</h1>
+    <p class="intro">프로젝트를 시작할 때 한 문씩 통과합니다. AI는 실행을 돕지만, 무엇을 풀고 어떻게 판단할지는 제가 정합니다.</p>
+    <section class="hero" aria-label="궁궐문 참고 이미지">
+      <div class="hero-copy"><p class="tiny">THE FIRST GATE</p><h2>모든 프로젝트는<br>문제정의의 문에서 시작합니다.</h2><p>좋아 보이는 기능부터 만들지 않습니다. 먼저 “왜 지금 이 문제를 풀어야 하는가”와 “누구에게 어떤 변화가 필요한가”를 확인합니다.</p></div>
+    </section>
+    <div class="legend"><strong>읽는 순서</strong><span><i style="background:#2878cb"></i>01~04 생각과 기준</span><span><i style="background:#d55e42"></i>05~07 실행과 통합</span><span><i style="background:#c7951c"></i>08~09 평가와 재사용</span></div>
+    <div class="wrap">
+      <section class="journey" aria-label="AI 활용 9단계 워크플로우">
+        <span class="connector c1"></span><span class="connector c2"></span><span class="connector c3"></span><span class="connector c4"></span><span class="connector c5"></span><span class="connector c6"></span><span class="connector c7"></span><span class="connector c8"></span>
+        <article class="gate g1"><span class="num">01 · FIRST GATE</span><h3>문제정의</h3><p>왜 지금인가?<br>누구의 어떤 불편인가?</p><small>WHY · SO WHAT</small></article>
+        <article class="gate g2"><span class="num">02 · CRITERIA GATE</span><h3>목표 · 성공 기준</h3><p>입력은 무엇이고,<br>어떤 결과를 성공으로 볼까?</p><small>INPUT · OUTPUT · EVAL</small></article>
+        <article class="gate g3"><span class="num">03 · THINKING GATE</span><h3>논리 구조화</h3><p>빠진 관점과 겹치는 일은 없는가?<br>원인과 선택지를 나눕니다.</p><small>MECE · LOGIC TREE</small></article>
+        <article class="gate g4"><span class="num">04 · RULES GATE</span><h3>PRD · Spec · Harness</h3><p>목표, 제약, 자료, 확인 기준을<br>AI가 따를 수 있게 적습니다.</p><small>RULES · CONTEXT · GUARDRAILS</small></article>
+        <article class="gate g5"><span class="num">05 · EXECUTION GATE</span><h3>실행 방식 설계</h3><p>AI에게 맡길 일과 내가 판단할 일을<br>나누고 도구를 고릅니다.</p><small>AGENT · TOOL · SKILL · MCP</small></article>
+        <article class="gate g6"><span class="num">06 · PARALLEL GATE</span><h3>병렬 실행 판단</h3><p>서로 기다리지 않는 일이라면<br>동시에 진행합니다.</p><small>SUB-AGENT · WORKTREE</small></article>
+        <article class="gate g7"><span class="num">07 · INTEGRATION GATE</span><h3>통합 · 버전 관리</h3><p>변경을 안전하게 묶고<br>검토할 수 있게 남깁니다.</p><small>GIT · BRANCH · COMMIT · PR</small></article>
+        <article class="gate g8"><span class="num">08 · EVALUATION GATE</span><h3>Eval · 개선</h3><p>목표에 맞는가? 근거가 있는가?<br>위험은 없는가?</p><small>CHECK · REVISE · RE-RUN</small></article>
+        <article class="gate g9"><span class="num">09 · REUSE GATE</span><h3>배포 · 기록 · 재사용</h3><p>누가 쓰는지 확인하고,<br>다음에 쓸 기준을 남깁니다.</p><small>URL · USE CASE · NEXT HYPOTHESIS</small></article>
+        <p class="loop">↺ 다음 프로젝트에서 01번 문으로 돌아갑니다</p>
+      </section>
+    </div>
+    <section class="principles" aria-label="워크플로우 해설">
+      <article class="card"><h2>하네스는 ‘AI 사용 설명서’가 아닙니다</h2><p>AI가 목표에서 벗어나지 않도록 자료, 금지할 것, 결과 형식, 평가 기준을 미리 정리한 작업 환경입니다. PRD·Spec·규칙 파일이 여기에 들어갑니다.</p></article>
+      <article class="card"><h2>병렬 실행은 빠르기 위한 선택입니다</h2><p>독립적인 조사·구현·검토처럼 서로 기다리지 않아도 되는 일에만 서브에이전트나 분리된 작업 공간을 사용합니다.</p></article>
+      <article class="card"><h2>Eval은 결과물의 채점표입니다</h2><p>“그럴듯한가”가 아니라, 처음 정한 목표·사실·품질·안전 기준을 만족하는지 확인하고 다음 개선을 정합니다.</p></article>
+    </section>
+    <p class="footer">궁궐문 사진은 참가자가 제공한 이미지를 이 결과물의 문 장식으로 사용했습니다. Git은 코드·파일 변경을 관리할 때, 배포는 다른 사람이 접근할 수 있는 곳에 결과물을 올릴 때 활용합니다.</p>
+  </main>
+</body>
+</html>

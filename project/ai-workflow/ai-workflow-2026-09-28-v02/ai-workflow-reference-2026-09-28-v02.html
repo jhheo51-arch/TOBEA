@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 활용 워크플로우 · 프로젝트 시작 전 읽는 기준</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#edf5fc;--ink:#162230;--muted:#4d6073;--rule:#cfdae6;--blue:#4779ef;--mint:#55d2a6;--gold:#f7bb19;--violet:#9882dd;--coral:#fb7856;--soft-blue:#6e9cf4;--green:#57c889;--white:#fff;--sans:'Geist','Malgun Gothic',sans-serif;--serif:'Instrument Serif','Malgun Gothic',serif;--mono:'Geist Mono','Malgun Gothic',monospace}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans)}main{max-width:1500px;margin:0 auto;padding:58px 32px 40px}.eyebrow{margin:0 0 10px;text-align:center;color:var(--muted);font:600 11px var(--mono);letter-spacing:.16em}.eyebrow span{display:inline-block;padding:5px 10px;border:1px solid var(--rule);border-radius:999px;background:#ffffff80}h1{margin:0;text-align:center;font:700 clamp(32px,4vw,52px)/1.1 var(--sans);letter-spacing:-.035em}.subtitle{max-width:810px;margin:16px auto 30px;text-align:center;color:var(--muted);font-size:16px;line-height:1.7}.diagram-wrap{overflow-x:auto;border-radius:16px}.diagram{display:block;min-width:1440px;width:100%;height:auto}.phase{font:600 12px var(--mono);letter-spacing:.14em}.step-no{font:700 12px var(--mono)}.step-title{font:700 22px var(--sans);letter-spacing:-.03em}.step-sub{font:500 12px var(--sans);fill:var(--muted)}.path{fill:none;stroke:#687c91;stroke-width:3;stroke-dasharray:4 5}.loop-label{font:600 11px var(--mono);letter-spacing:.04em;fill:var(--green)}.notes{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:28px}.card{padding:20px 21px;border:1px solid var(--rule);border-radius:10px;background:#ffffffa8}.card h2{display:flex;gap:9px;align-items:center;margin:0 0 10px;font-size:16px}.dot{width:9px;height:9px;border-radius:50%;background:var(--blue);display:inline-block}.card:nth-child(2) .dot{background:var(--coral)}.card:nth-child(3) .dot{background:var(--green)}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}.footer{margin:28px 0 0;padding-top:16px;border-top:1px solid var(--rule);color:#6b7b8c;font:11px/1.65 var(--mono)}@media(max-width:700px){main{padding:38px 16px}.subtitle{font-size:14px}.notes{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow"><span>PROJECT START REFERENCE · 2026.09.28</span></p>
+    <h1>AI 활용 워크플로우</h1>
+    <p class="subtitle">AI에게 일을 바로 맡기기 전에, 문제·기준·실행 환경을 먼저 설계합니다. 실행 뒤에는 평가와 기록을 거쳐 다음 프로젝트에 더 나은 방식으로 돌아옵니다.</p>
+    <div class="diagram-wrap">
+      <svg class="diagram" viewBox="0 0 1440 840" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ai-reference-title ai-reference-desc">
+        <title id="ai-reference-title">프로젝트 시작 전 읽는 AI 활용 워크플로우</title>
+        <desc id="ai-reference-desc">문제정의에서 시작해 목표와 논리를 세우고, 요구사항과 AI 실행 환경을 설계한 뒤 병렬 작업, 버전 관리, 평가, 배포와 기록으로 이어지는 아홉 단계 순환 흐름입니다.</desc>
+        <defs>
+          <marker id="ai-ref-arrow" markerWidth="11" markerHeight="8" refX="10" refY="4" orient="auto"><polygon points="0 0,11 4,0 8" fill="#687c91"/></marker>
+          <marker id="ai-ref-loop" markerWidth="11" markerHeight="8" refX="10" refY="4" orient="auto"><polygon points="0 0,11 4,0 8" fill="#57c889"/></marker>
+        </defs>
+        <text x="60" y="132" class="phase" fill="#4779ef">01 · 시작 전 설계</text>
+        <text x="878" y="132" class="phase" fill="#fb7856">02 · 실행과 통합</text>
+        <text x="60" y="500" class="phase" fill="#57c889">03 · 평가와 재사용</text>
+        <!-- Connectors are behind the stage shapes. -->
+        <path class="path" d="M280 286 H322" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M552 286 H594" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M824 286 H866" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M1096 286 H1138" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M1370 286 H1395 Q1412 286 1412 304 V542 Q1412 560 1394 560 H1374" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M1148 560 H1094" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M876 560 H822" marker-end="url(#ai-ref-arrow)"/>
+        <path class="path" d="M604 560 H550" marker-end="url(#ai-ref-arrow)"/>
+        <path d="M322 629 H58 Q40 629 40 611 V230 Q40 212 58 212 H62" fill="none" stroke="#57c889" stroke-width="4" marker-end="url(#ai-ref-loop)"/>
+        <text x="62" y="680" class="loop-label">↺ 기록한 기준을 다음 문제정의에 다시 사용</text>
+        <!-- Top row: reading direction left to right. -->
+        <g>
+          <polygon points="60,212 244,212 280,286 244,360 60,360 94,286" fill="var(--white)" stroke="var(--blue)" stroke-width="7"/>
+          <text x="84" y="242" class="step-no" fill="var(--blue)">01</text><text x="170" y="280" class="step-title" text-anchor="middle">문제정의</text><text x="170" y="310" class="step-sub" text-anchor="middle">왜 지금? 누구의 불편?</text><text x="170" y="332" class="step-sub" text-anchor="middle">Why · So What</text>
+        </g>
+        <g>
+          <polygon points="332,212 516,212 552,286 516,360 332,360 366,286" fill="var(--white)" stroke="var(--mint)" stroke-width="7"/>
+          <text x="356" y="242" class="step-no" fill="var(--mint)">02</text><text x="442" y="268" class="step-title" text-anchor="middle">목표 · 성공 기준</text><text x="442" y="302" class="step-sub" text-anchor="middle">입력 · 기대 결과 · 기준</text><text x="442" y="326" class="step-sub" text-anchor="middle">Input · Output · Eval</text>
+        </g>
+        <g>
+          <polygon points="604,212 788,212 824,286 788,360 604,360 638,286" fill="var(--white)" stroke="var(--gold)" stroke-width="7"/>
+          <text x="628" y="242" class="step-no" fill="var(--gold)">03</text><text x="714" y="280" class="step-title" text-anchor="middle">논리 구조화</text><text x="714" y="310" class="step-sub" text-anchor="middle">빠진 관점은 없는가?</text><text x="714" y="332" class="step-sub" text-anchor="middle">MECE · Logic Tree</text>
+        </g>
+        <g>
+          <polygon points="876,212 1060,212 1096,286 1060,360 876,360 910,286" fill="var(--white)" stroke="var(--violet)" stroke-width="7"/>
+          <text x="900" y="242" class="step-no" fill="var(--violet)">04</text><text x="986" y="268" class="step-title" text-anchor="middle">PRD · Spec · Harness</text><text x="986" y="302" class="step-sub" text-anchor="middle">규칙 · 제약 · 검증 환경</text><text x="986" y="326" class="step-sub" text-anchor="middle">AI가 목표를 벗어나지 않게</text>
+        </g>
+        <g>
+          <polygon points="1148,212 1332,212 1368,286 1332,360 1148,360 1182,286" fill="var(--white)" stroke="var(--coral)" stroke-width="7"/>
+          <text x="1172" y="242" class="step-no" fill="var(--coral)">05</text><text x="1258" y="268" class="step-title" text-anchor="middle">실행 방식 설계</text><text x="1258" y="302" class="step-sub" text-anchor="middle">무엇을 누가 어떻게 할까?</text><text x="1258" y="326" class="step-sub" text-anchor="middle">Agent · Tool · Skill · MCP</text>
+        </g>
+        <!-- Bottom row: reading direction right to left. -->
+        <g>
+          <polygon points="1182,486 1368,486 1334,560 1368,634 1182,634 1148,560" fill="var(--white)" stroke="var(--mint)" stroke-width="7"/>
+          <text x="1344" y="516" class="step-no" fill="var(--mint)">06</text><text x="1258" y="541" class="step-title" text-anchor="middle">병렬 실행 판단</text><text x="1258" y="574" class="step-sub" text-anchor="middle">서로 독립된 일인가?</text><text x="1258" y="598" class="step-sub" text-anchor="middle">Sub-agent · Worktree</text>
+        </g>
+        <g>
+          <polygon points="910,486 1096,486 1062,560 1096,634 910,634 876,560" fill="var(--white)" stroke="var(--soft-blue)" stroke-width="7"/>
+          <text x="1072" y="516" class="step-no" fill="var(--soft-blue)">07</text><text x="986" y="541" class="step-title" text-anchor="middle">통합 · 버전 관리</text><text x="986" y="574" class="step-sub" text-anchor="middle">변경을 안전하게 묶기</text><text x="986" y="598" class="step-sub" text-anchor="middle">Git · Branch · Commit · PR</text>
+        </g>
+        <g>
+          <polygon points="638,486 824,486 790,560 824,634 638,634 604,560" fill="var(--white)" stroke="var(--coral)" stroke-width="7"/>
+          <text x="800" y="516" class="step-no" fill="var(--coral)">08</text><text x="714" y="541" class="step-title" text-anchor="middle">Eval · 개선</text><text x="714" y="574" class="step-sub" text-anchor="middle">결과 · 근거 · 위험 점검</text><text x="714" y="598" class="step-sub" text-anchor="middle">수정 · 재실행 · 확인</text>
+        </g>
+        <g>
+          <polygon points="366,486 552,486 518,560 552,634 366,634 332,560" fill="var(--white)" stroke="var(--gold)" stroke-width="7"/>
+          <text x="528" y="516" class="step-no" fill="var(--gold)">09</text><text x="442" y="530" class="step-title" text-anchor="middle">배포 · 기록 · 재사용</text><text x="442" y="565" class="step-sub" text-anchor="middle">누가 쓰는가? 무엇을 배웠나?</text><text x="442" y="588" class="step-sub" text-anchor="middle">URL · Use case · 다음 가설</text>
+        </g>
+        <g transform="translate(60 732)">
+          <rect width="1320" height="54" rx="10" fill="#ffffff96" stroke="#cfdae6"/>
+          <text x="20" y="23" font-family="var(--mono)" font-size="11" font-weight="600" fill="#162230">사용법</text>
+          <text x="20" y="41" font-family="var(--sans)" font-size="13" fill="#4d6073">새 프로젝트를 시작할 때 01~05를 먼저 읽고, 코드·파일 변경이 있으면 06~08을 거친 뒤, 09에서 다음번에 쓸 기준을 남깁니다.</text>
+        </g>
+      </svg>
+    </div>
+    <section class="notes" aria-label="워크플로우 핵심 원칙">
+      <article class="card"><h2><span class="dot"></span>AI는 실행 파트너입니다</h2><p>AI가 계획·도구 사용·초안 제작을 도울 수 있어도, 문제 선택·성공 기준·최종 판단까지 대신하지는 않습니다.</p></article>
+      <article class="card"><h2><span class="dot"></span>병렬 실행은 조건부입니다</h2><p>작업끼리 서로 기다리지 않아도 될 때만 서브에이전트나 분리된 작업 공간을 사용합니다. 그렇지 않으면 순서대로 진행합니다.</p></article>
+      <article class="card"><h2><span class="dot"></span>기록이 다음 성능을 만듭니다</h2><p>잘된 요청, 실패 기준, 수정 이유를 남기면 다음에는 하네스와 체크리스트로 재사용할 수 있습니다.</p></article>
+    </section>
+    <p class="footer">이 자료는 수업에서 배운 개념과 첨부한 흐름도 형식을 참고해 새로 구성했습니다. Git은 코드·파일 변경을 관리할 때, 배포는 다른 사람이 접근할 수 있는 환경에 결과물을 올릴 때 사용합니다.</p>
+  </main>
+</body>
+</html>

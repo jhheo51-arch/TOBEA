@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ContextLens — 맥락을 먼저 읽는 댓글 분석</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/refinement.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="ContextLens 처음으로"><span class="brand-mark" aria-hidden="true">C<span>.</span></span><span>ContextLens</span></a>
+      <span class="header-note">대화 기반 고객경험 조사 <span class="version">v04</span></span>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> CONVERSATION INTELLIGENCE</div>
+      <h1 id="page-title">댓글보다 먼저,<br><em>맥락을 읽습니다.</em></h1>
+      <p class="intro-copy">유튜브 영상이나 뉴스 기사의 공개 링크를 넣어 주세요. 원문과 댓글을 함께 읽고, 시청자가 원하는 것과 다음에 제공할 것을 근거에 따라 정리합니다.</p>
+      <div class="intro-meta"><span>01 · 원문 확인</span><span>02 · 표본 비교</span><span>03 · 원하는 것</span><span>04 · 제공할 것</span></div>
+    </section>
+
+    <section class="input-card" aria-labelledby="input-title">
+      <div class="section-top"><div><p class="kicker">START HERE</p><h2 id="input-title">첫 분석 시작하기</h2></div><span class="tag">유튜브 우선 · 뉴스 지원</span></div>
+      <form id="url-form" novalidate>
+        <label for="url-input">공개 유튜브 영상 또는 뉴스 기사 링크</label>
+        <div class="input-row"><input id="url-input" name="url" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url" required><button id="analyze-button" type="submit"><span>맥락부터 분석하기</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+        <p class="field-help">공개 자료만 읽습니다. 영상 자막이나 사이트 댓글에 접근할 수 없으면 그 이유를 결과에 표시합니다.</p>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+      </form>
+      <div id="recent-cases" class="recent-cases" hidden><strong>내가 기록한 분석</strong><div id="recent-list" class="recent-list"></div><p>이 브라우저에 메모만 저장됩니다. 다른 기기로 옮길 때는 결과의 자료 저장을 사용해 주세요.</p></div>
+      <details class="manual-panel"><summary>가져오지 못한 자료가 있나요? 직접 붙여 넣기</summary><div class="manual-body"><p>링크로 자동 수집이 막힌 경우, 보유한 자막·기사 본문과 공개 댓글을 넣어 같은 분석을 할 수 있습니다. 댓글은 한 줄에 하나씩 입력해 주세요.</p><label for="manual-title">제목</label><input id="manual-title" type="text" placeholder="분석할 콘텐츠 제목"><label for="manual-body">영상 자막 또는 기사 본문</label><textarea id="manual-body" rows="7" placeholder="원문 내용을 붙여 넣어 주세요."></textarea><label for="manual-comments">댓글</label><textarea id="manual-comments" rows="6" placeholder="댓글 하나를 한 줄에 입력해 주세요."></textarea><button id="manual-button" class="secondary-button" type="button">붙여 넣은 자료 분석</button><p id="manual-error" class="form-error" role="alert" hidden></p></div></details>
+    </section>
+
+    <section id="progress" class="progress-card" aria-live="polite" hidden><span class="spinner" aria-hidden="true"></span><div><strong id="progress-title">공개 자료를 확인하고 있습니다</strong><p id="progress-detail">페이지 접근 상태에 따라 잠시 걸릴 수 있습니다.</p></div></section>
+
+    <div id="results" hidden>
+      <div class="results-heading"><div><p class="kicker">분석 작업 공간</p><h2>이번 분석 결과</h2><p class="results-lede">원문과 표본을 확인한 뒤, 욕구 후보와 개선 가설을 검토하세요.</p></div><div class="result-actions"><button id="download-md" class="secondary-button" type="button">요약 저장</button><button id="download-json" class="secondary-button" type="button">자료 저장</button></div></div>
+      <nav class="result-nav" aria-label="분석 결과 이동"><a href="#source-title">원문</a><a id="nav-sampling" href="#sampling-title">표본·언어</a><a id="nav-cx" href="#cx-title">욕구와 제공물</a><a href="#comments-title">근거 댓글</a><a href="#review-title">내 판단</a></nav>
+      <div id="overview" class="overview" aria-label="분석 범위 요약"><div><span class="overview-label">원문 상태</span><strong id="overview-context">확인 중</strong></div><div><span class="overview-label">수집한 댓글</span><strong id="overview-comments">확인 중</strong></div><div><span class="overview-label">직접 읽을 댓글</span><strong id="overview-review">확인 중</strong></div></div>
+
+      <div class="results-layout"><div class="results-primary">
+
+      <section class="source-card" aria-labelledby="source-title"><div class="source-header"><div><p class="kicker">01 · 분석 대상</p><h3 id="source-title"></h3><p id="source-meta" class="muted"></p></div><span id="source-badge" class="source-badge"></span></div><a id="source-link" class="source-link" target="_blank" rel="noopener noreferrer">원문 열기 <span aria-hidden="true">↗</span></a><details class="source-description-wrap"><summary>소개글 확인</summary><p id="source-description" class="source-description"></p></details><div class="evidence-strip"><div><span class="evidence-label">본문 확보</span><strong id="evidence-body"></strong></div><div><span class="evidence-label">댓글 수집</span><strong id="evidence-comments"></strong></div><div><span class="evidence-label">수집 시각</span><strong id="evidence-time"></strong></div></div></section>
+
+      <div class="analysis-grid">
+        <section class="panel context-panel" aria-labelledby="context-title"><div class="panel-heading"><div><p class="kicker">02 · 자료에서 확인</p><h3 id="context-title">원문 맥락</h3></div><span id="context-status" class="status-pill"></span></div><p id="context-basis" class="muted"></p><ul id="source-facts" class="source-facts"></ul><details id="context-excerpts" class="evidence-details"><summary>자동 추출 문장 보기</summary><ol id="context-list" class="context-list"></ol></details><p id="context-empty" class="empty-note" hidden>본문을 확보하지 못해 영상·기사의 내용을 판단할 수 없습니다.</p></section>
+        <section class="panel reaction-panel" aria-labelledby="reaction-title"><div class="panel-heading"><div><p class="kicker">03 · 댓글에서 관찰</p><h3 id="reaction-title">댓글의 반응</h3></div><span id="reaction-count" class="status-pill"></span></div><p class="muted">아래 비중은 수집된 댓글 안에서만 계산했습니다.</p><div id="type-bars" class="type-bars"></div><div class="divider"></div><h4>반복 표현</h4><div id="themes" class="themes"></div></section>
+      </div>
+
+      <section id="sampling-panel" class="panel sampling-panel" aria-labelledby="sampling-title" hidden><div class="panel-heading"><div><p class="kicker">04 · 분석 범위</p><h3 id="sampling-title">어떤 댓글을 읽었나요?</h3></div></div><div id="sampling-stats" class="sampling-stats"></div><p class="muted">최신순과 인기순은 같은 모집단의 무작위 표본이 아닙니다. 중복 댓글은 한 번만 계산하고, 아래 욕구 후보에는 두 정렬의 건수를 따로 표시합니다.</p></section>
+
+      <section class="panel language-panel" aria-labelledby="language-title"><div class="panel-heading"><div><p class="kicker">05 · 언어 범위</p><h3 id="language-title">댓글 언어와 직접 검토</h3></div></div><div id="language-stats" class="language-stats"></div><p id="language-scope" class="muted"></p><p class="muted">자동 번역은 하지 않습니다. 언어 표시는 문자와 일부 영어 단어에 따른 추정입니다. 검토 대상으로 표시된 댓글도 아래에서 원문을 볼 수 있습니다.</p></section>
+
+      <section id="cx-panel" class="panel cx-panel" aria-labelledby="cx-title" hidden><div class="panel-heading"><div><p class="kicker">06 · 해석과 제안</p><h3 id="cx-title">시청자가 원하는 것과 다음에 제공할 것</h3></div></div><p class="muted">댓글에 드러난 표현을 욕구 후보로 해석했습니다. 제안은 실험 가설이며, 영상에서 직접 확인한 사실과 구분해 주세요.</p><p id="cx-language-warning" class="cx-language-warning" hidden>직접 검토가 필요한 언어 댓글이 많습니다. 해당 댓글을 읽기 전에는 제안의 우선순위를 확정하지 마세요.</p><div id="cx-needs" class="cx-needs"></div></section>
+
+      <section id="insight-panel" class="panel insight-panel" aria-labelledby="insight-title"><div class="panel-heading"><div><p class="kicker">03 · FIND THE NEXT QUESTION</p><h3 id="insight-title">개선할 문제 후보</h3></div></div><div id="candidates" class="candidate-list"></div><p class="insight-footnote">자동 분류 결과는 출발점입니다. 아래 댓글의 맥락과 반대 사례를 읽고 실제 원인을 검증해 주세요.</p></section>
+
+      <section class="panel comments-panel" aria-labelledby="comments-title"><div class="panel-heading"><div><p class="kicker">07 · 원문 근거</p><h3 id="comments-title">근거 댓글</h3></div><span id="comments-shown" class="muted"></span></div><div class="comment-toolbar"><div><label for="comment-filter">정렬별 보기</label><select id="comment-filter"><option value="all">전체 고유 댓글</option><option value="latest">최신순에 나온 댓글</option><option value="popular">인기순에 나온 댓글</option></select></div><div><label for="language-filter">언어 단서별 보기</label><select id="language-filter"><option value="all">모든 언어</option><option value="ko">한국어 단서</option><option value="en">영어 단서</option><option value="ko_en">한국어·영어 혼합</option><option value="review">직접 검토 필요</option></select></div></div><div id="comments-list" class="comments-list"></div><button id="more-comments" class="secondary-button more-comments" type="button" hidden>댓글 40개 더 보기</button></section>
+
+      </div><aside class="results-side" aria-label="나의 분석 메모">
+
+      <section class="panel review-panel" aria-labelledby="review-title"><div class="panel-heading"><div><p class="kicker">YOUR RESEARCH</p><h3 id="review-title">내 판단 남기기</h3></div><span id="note-status" class="status-pill" role="status">저장 대기</span></div><p class="muted">관찰과 추정을 나눠 적어 보세요. 메모는 이 브라우저에 자동 저장되고, 요약·자료 저장 파일에도 담깁니다.</p><div class="review-grid"><div><label for="note-context">원문에서 직접 확인한 핵심</label><textarea id="note-context" rows="4" placeholder="영상이나 기사에서 확인한 주장·상황을 적어 주세요."></textarea></div><div><label for="note-pattern">댓글에서 확인한 반복 문제와 반례</label><textarea id="note-pattern" rows="4" placeholder="어떤 댓글들이 같은 문제를 말했나요? 다른 해석은 없나요?"></textarea></div><div><label for="note-improvement">개선 가설</label><textarea id="note-improvement" rows="4" placeholder="안내, 화면, 정책, 콘텐츠 중 무엇을 바꾸면 좋을까요?"></textarea></div><div><label for="note-test">다음 확인 방법</label><textarea id="note-test" rows="4" placeholder="이 가설이 맞는지 어떻게 확인할까요?"></textarea></div></div></section>
+
+      </aside></div>
+
+      <section class="limits-panel" aria-labelledby="limits-title"><h3 id="limits-title">이 결과를 읽을 때</h3><ul id="limitations"></ul></section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>ContextLens · 로컬 분석 도구</span><span>관찰한 사실과 해석을 구분합니다.</span></div></footer>
+</body>
+</html>

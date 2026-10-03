@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROOFLINE | 강점에서 다음 방향까지</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner"><a class="brand" href="#top">P<span>.</span> PROOFLINE</a><a href="#records">저장된 기록 보기</a></div>
+  </header>
+  <main id="top" class="shell">
+    <section class="intro">
+      <p class="eyebrow">강점을 찾고, 다음 행동을 정하는 한 장</p>
+      <h1>한 사람의 이야기가<br><em>어떻게 기록되는지</em> 보세요.</h1>
+      <p>가상 인물의 이야기를 불러와 입력 내용, 방향 카드, 저장 기록을 직접 확인할 수 있습니다. 이 시연은 실제 상담 결과가 아닙니다.</p>
+      <button type="button" class="button primary" id="demoButton">가상 사례 불러와 저장하기</button>
+      <p class="small">입력과 기록은 이 브라우저에만 저장됩니다. 이름과 이야기를 직접 적어 시험해 볼 수도 있습니다.</p>
+    </section>
+
+    <div class="layout">
+      <section class="panel" aria-labelledby="inputTitle">
+        <div class="panel-head"><span>01 / 이야기 기록</span><h2 id="inputTitle">무슨 이야기를 들었나요?</h2></div>
+        <form id="intakeForm">
+          <label for="name">이름 또는 가명</label><input id="name" name="name" maxlength="50" required placeholder="예: 박다은">
+          <label for="story">지금 고민하는 것</label><textarea id="story" name="story" rows="3" maxlength="300" required placeholder="무슨 방향을 고민하고 있나요?"></textarea>
+          <label for="evidence">경험 속 실제 장면</label><textarea id="evidence" name="evidence" rows="3" maxlength="300" required placeholder="어떤 일을 직접 해봤나요?"></textarea>
+          <label for="strength">그 장면에서 보인 강점 가설</label><input id="strength" name="strength" maxlength="120" required placeholder="예: 복잡한 과정을 쉬운 단계로 설명">
+          <label for="preference">중요하게 여기는 조건</label><input id="preference" name="preference" maxlength="150" placeholder="예: 사람을 직접 돕는 일, 규칙적인 일정">
+          <label for="audience">도움받을 수 있는 사람</label><input id="audience" name="audience" maxlength="120" placeholder="예: 디지털 예약이 어려운 사람">
+          <label for="context">관련 사회·산업 흐름</label><input id="context" name="context" maxlength="180" placeholder="확인한 자료가 없다면 비워두세요">
+          <label for="source">흐름의 출처와 확인 날짜</label><input id="source" name="source" maxlength="200" placeholder="예: 기관명·자료명·확인일">
+          <label for="direction">시험해 볼 방향</label><input id="direction" name="direction" maxlength="180" required placeholder="예: 안내 자료 제작과 작은 실습을 시험">
+          <label for="firstStep">가장 작은 첫 행동</label><input id="firstStep" name="firstStep" maxlength="180" required placeholder="예: 안내문 1장을 만들고 두 사람에게 보여주기">
+          <p class="small">강점과 방향은 대화에서 함께 정리한 가설입니다. 출처가 없는 흐름은 결과에 ‘조사 전’으로 표시합니다.</p>
+          <button type="submit" class="button primary">한 장 만들고 기록 저장</button>
+        </form>
+      </section>
+
+      <section class="panel result-panel" aria-labelledby="resultTitle">
+        <div class="panel-head"><span>02 / 한 장 방향 카드</span><h2 id="resultTitle">어떻게 정리되나요?</h2></div>
+        <div id="empty" class="empty">왼쪽의 <strong>가상 사례 불러와 저장하기</strong>를 누르면 실제 기록 형태를 볼 수 있습니다.</div>
+        <article id="card" class="card" hidden>
+          <div class="card-top"><span id="cardTag"></span><span id="cardDate"></span></div>
+          <h3 id="cardName"></h3>
+          <div class="card-block"><span>들어온 이야기</span><p id="cardStory"></p></div>
+          <div class="card-block"><span>경험 근거</span><p id="cardEvidence"></p></div>
+          <div class="card-block emphasis"><span>강점 가설</span><p id="cardStrength"></p><small>상대가 이 해석에 동의하는지 확인이 필요합니다.</small></div>
+          <div class="card-grid">
+            <div class="card-block"><span>중요한 조건</span><p id="cardPreference"></p></div>
+            <div class="card-block"><span>관련 흐름</span><p id="cardContext"></p><small id="cardSource"></small></div>
+          </div>
+          <div class="card-block"><span>시험할 방향</span><p id="cardDirection"></p></div>
+          <div class="card-block"><span>20초 자기소개 초안</span><p id="cardIntro"></p></div>
+          <div class="card-block"><span>처음 알릴 이야기</span><p id="cardContent"></p></div>
+          <div class="card-block"><span>가장 작은 첫 행동</span><p id="cardFirstStep"></p></div>
+          <p class="card-note">이 카드는 입력을 정리한 초안입니다. 진로·사업 성과를 보장하지 않습니다.</p>
+        </article>
+      </section>
+    </div>
+
+    <section id="records" class="records" aria-labelledby="recordsTitle">
+      <div class="records-heading"><div><span class="eyebrow">03 / 저장된 기록</span><h2 id="recordsTitle">이 브라우저의 기록</h2></div><p>기록을 누르면 한 장 카드가 다시 열립니다.</p></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="recordList" class="record-list"></div>
+    </section>
+  </main>
+  <footer class="shell">PROOFLINE · 가상 사례 시연 · 이 기기에서만 저장</footer>
+</body>
+</html>

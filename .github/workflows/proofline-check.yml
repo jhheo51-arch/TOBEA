@@ -1,10 +1,10 @@
 name: PROOFLINE checks
 on:
   pull_request:
-    paths: ["proofline/**", ".github/workflows/proofline-check.yml"]
+    paths: ["project/proofline/**", ".github/workflows/proofline-check.yml"]
   push:
     branches: [main]
-    paths: ["proofline/**", ".github/workflows/proofline-check.yml"]
+    paths: ["project/proofline/**", ".github/workflows/proofline-check.yml"]
 permissions:
   contents: read
 jobs:
@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --check proofline/dist/script.js
-      - run: node proofline/check.cjs
+      - run: node --check project/proofline/dist/script.js
+      - run: node project/proofline/check.cjs
