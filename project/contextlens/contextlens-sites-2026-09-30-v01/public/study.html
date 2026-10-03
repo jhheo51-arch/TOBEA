@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContextLens — 사용성 실험</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/refinement.css">
+  <link rel="stylesheet" href="/study.css">
+  <script src="/study.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="ContextLens 처음으로"><span class="brand-mark" aria-hidden="true">C<span>.</span></span><span>ContextLens</span></a><span class="header-note">사용성 실험 · v08</span></div></header>
+  <main id="main" class="shell study-page">
+    <div class="study-top"><div><p class="kicker">CX IMPROVEMENT STUDY</p><h1>개선 효과를<br><em>직접 확인하기</em></h1><p class="intro-copy">처음 쓰는 사람이 근거를 찾고 개선 가설을 완성할 수 있는지 관찰합니다. 참가자의 이름이나 연락처는 수집하지 않습니다.</p></div><a class="secondary-button study-back" href="/">분석 화면으로</a></div>
+    <section class="panel study-task" aria-labelledby="task-title"><div class="panel-heading"><div><p class="kicker">고정 과제</p><h2 id="task-title">10분 안에 근거 2개·반례 1개 찾기</h2></div></div><p>같은 저장된 분석 자료에서 서로 다른 댓글 근거 2개와 반례 1개를 고른 뒤, 20자 이상의 개선 가설을 작성합니다.</p><p class="muted">변경 전에는 댓글을 직접 찾아야 합니다. 변경 후에는 제안 카드에서 연결된 근거 댓글로 이동할 수 있습니다. 두 방식 모두 댓글 선택과 가설 입력 기능은 같습니다.</p></section>
+    <section class="panel" aria-labelledby="start-title"><div class="panel-heading"><div><p class="kicker">새 참가자</p><h2 id="start-title">시험 시작</h2></div></div><form id="start-form" class="study-form"><label for="study-source">같은 자료로 시험하기</label><select id="study-source" required></select><label for="study-variant">시험 방식</label><select id="study-variant"><option value="before">변경 전 · 근거 댓글 바로 이동 없음</option><option value="after">변경 후 · 근거 댓글 바로 이동</option></select><p class="muted">변경 전 참가자 5명 정도를 먼저 관찰하고, 같은 과제를 변경 후 참가자에게 진행해 보세요. 완료 시간을 서버가 기록합니다.</p><button type="submit">익명 시험 시작</button><p id="start-error" class="form-error" role="alert" hidden></p></form></section>
+    <section class="panel" aria-labelledby="results-title"><div class="panel-heading"><div><p class="kicker">관찰 기록</p><h2 id="results-title">변경 전후 비교</h2></div><button id="download-report" class="secondary-button" type="button">사례 요약 저장</button></div><p class="muted">제출된 답변은 아래에서 사람이 읽고 판정합니다. 자동 완료 조건만으로 성공을 확정하지 않습니다.</p><div id="cohort-summary" class="cohort-summary"></div><p id="study-caution" class="study-caution"></p><h3>참가자별 검토</h3><div id="session-list" class="session-list"></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>ContextLens · 비공개 사용성 실험</span><span>작은 표본의 결과는 탐색적 관찰입니다.</span></div></footer>
+</body>
+</html>

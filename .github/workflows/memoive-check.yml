@@ -3,12 +3,12 @@ name: MEMOIVE checks
 on:
   pull_request:
     paths:
-      - "memoive/**"
+      - "project/memoive/**"
       - ".github/workflows/memoive-check.yml"
   push:
     branches: [main]
     paths:
-      - "memoive/**"
+      - "project/memoive/**"
       - ".github/workflows/memoive-check.yml"
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: memoive
+        working-directory: project/memoive
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

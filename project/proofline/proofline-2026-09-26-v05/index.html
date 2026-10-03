@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PROOFLINE | 경험에서 첫 행동까지</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="PROOFLINE 처음으로"><span class="logo-mark">P<span class="logo-dot">.</span></span><span>PROOFLINE</span></a>
+    <nav aria-label="페이지 이동"><a href="#studio">한 장 만들기</a><a href="#records">저장된 기록</a></nav>
+    <a class="top-cta" href="#studio">가상 사례 보기 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> STRENGTH TO DIRECTION · V05</p>
+        <h1 id="heroTitle">나의 이야기에서<br><em>다음 방향</em>으로.</h1>
+        <p class="hero-lead">한 사람의 경험에서 강점과 중요한 기준을 찾고, <strong>자기소개와 첫 행동</strong>까지 한 장으로 정리합니다. 실행한 뒤에는 반응을 기록해 다시 고칩니다.</p>
+        <div class="hero-actions"><button type="button" class="button button-dark" id="demoButton">가상 사례 전체 보기 <span aria-hidden="true">↗</span></button><span>로그인 없이 · 이 기기에서만 저장</span></div>
+      </div>
+      <div class="hero-art" aria-label="이야기가 한 장의 방향 카드로 정리되는 모습">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="float-note note-one"><small>01 / STORY</small><strong>“이런 일을 해봤어요”</strong><span>경험 · 선택 기준</span></div>
+        <div class="float-note note-two"><small>02 / DIRECTION</small><strong>“여기부터 해볼게요”</strong><span>강점 가설 · 첫 행동</span></div>
+        <div class="result-card"><span class="result-card-label">YOUR DIRECTION</span><div class="result-card-icon" aria-hidden="true">✦</div><strong>나의 경험을<br>나의 강점으로,<br><i>다음 한 걸음으로.</i></strong><span class="result-card-bottom">PROOFLINE / 2026</span></div>
+        <span class="art-caption">FROM YOUR STORY → YOUR NEXT STEP</span>
+      </div>
+    </section>
+
+    <section class="studio" id="studio">
+      <div class="studio-intro"><div><p class="section-kicker">01 / THE STUDIO</p><h2>듣고, 정하고,<br><em>시험하고 다시 고칩니다.</em></h2></div><p>가상 사례 버튼을 누르면 첫 상담 결과와 실행 후 수정 기록이 함께 저장됩니다. 왼쪽은 상담 기록, 오른쪽은 이용자에게 보여줄 한 장입니다.</p></div>
+      <div class="layout">
+        <section class="panel" aria-labelledby="inputTitle">
+          <div class="panel-head"><span>INPUT / 상담 기록</span><h2 id="inputTitle">이야기와 근거를 적습니다</h2></div>
+          <form id="intakeForm">
+            <fieldset class="stage">
+              <legend>01. 이야기와 강점</legend>
+              <label for="name">이름 또는 가명</label><input id="name" name="name" maxlength="60" required placeholder="실명 대신 가명을 써도 됩니다">
+              <label for="story">현재 고민</label><textarea id="story" name="story" rows="3" maxlength="500" required placeholder="무엇을 고민하고 있나요?"></textarea>
+              <label for="evidence">직접 해본 일</label><textarea id="evidence" name="evidence" rows="3" maxlength="500" required placeholder="실제 장면을 적어주세요"></textarea>
+              <label for="strength1">강점 가설 1</label><input id="strength1" name="strength1" maxlength="160" required>
+              <label for="proof1">그렇게 본 근거 1</label><textarea id="proof1" name="proof1" rows="2" maxlength="350" required></textarea>
+              <label for="strength2">강점 가설 2</label><input id="strength2" name="strength2" maxlength="160">
+              <label for="proof2">그렇게 본 근거 2</label><textarea id="proof2" name="proof2" rows="2" maxlength="350"></textarea>
+              <label for="preference">중요하게 여기는 조건</label><input id="preference" name="preference" maxlength="180" placeholder="예: 사람을 직접 돕는 일">
+              <label for="audience">도움받을 수 있는 사람</label><input id="audience" name="audience" maxlength="180" placeholder="예: 디지털 예약이 어려운 분">
+            </fieldset>
+
+            <fieldset class="stage">
+              <legend>02. 자료와 가능한 방향</legend>
+              <label for="context">관련 사회·산업 흐름</label><textarea id="context" name="context" rows="2" maxlength="350" placeholder="자료로 확인한 변화만 적어주세요"></textarea>
+              <label for="sourceTitle">자료 이름</label><input id="sourceTitle" name="sourceTitle" maxlength="180" placeholder="예: 기관명·자료명">
+              <label for="sourceUrl">자료 주소</label><input id="sourceUrl" name="sourceUrl" type="url" maxlength="400" placeholder="https://">
+              <label for="checkedAt">자료 확인 날짜</label><input id="checkedAt" name="checkedAt" type="date">
+              <p class="small">자료 이름·주소·날짜가 모두 있어야 카드에 흐름을 표시합니다. 빠지면 ‘조사 전’으로 나옵니다.</p>
+              <label for="directionA">가능한 방향 1</label><input id="directionA" name="directionA" maxlength="220" required>
+              <label for="reasonA">왜 이 방향인가요?</label><textarea id="reasonA" name="reasonA" rows="2" maxlength="350" required></textarea>
+              <label for="directionB">가능한 방향 2</label><input id="directionB" name="directionB" maxlength="220">
+              <label for="reasonB">두 번째 방향의 이유</label><textarea id="reasonB" name="reasonB" rows="2" maxlength="350"></textarea>
+              <label for="chosen">본인이 고른 첫 방향</label><select id="chosen" name="chosen"><option value="A">방향 1</option><option value="B">방향 2</option><option value="pending">아직 선택 전</option></select>
+            </fieldset>
+
+            <fieldset class="stage">
+              <legend>03. 표현과 작은 실행</legend>
+              <label for="intro">20초 자기소개 초안</label><textarea id="intro" name="intro" rows="3" maxlength="400" placeholder="상담자가 함께 고쳐 적습니다"></textarea>
+              <label for="firstActivity">첫 활동 또는 작은 서비스</label><input id="firstActivity" name="firstActivity" maxlength="220" placeholder="판매가 목적이 아니면 작은 프로젝트도 됩니다">
+              <label for="contentIdea">처음 알릴 이야기</label><textarea id="contentIdea" name="contentIdea" rows="2" maxlength="350"></textarea>
+              <label for="firstStep">가장 작은 첫 행동</label><input id="firstStep" name="firstStep" maxlength="220">
+              <label for="validationQuestion">상대에게 확인할 질문</label><input id="validationQuestion" name="validationQuestion" maxlength="250">
+            </fieldset>
+
+            <fieldset class="stage">
+              <legend>04. 해본 뒤 반응과 수정</legend>
+              <p class="small">첫 카드에서는 비워두고, 실제로 해본 뒤 같은 기록을 다시 열어 적습니다.</p>
+              <label for="actionDone">실제로 한 행동</label><textarea id="actionDone" name="actionDone" rows="2" maxlength="350"></textarea>
+              <label for="reaction">상대의 반응</label><textarea id="reaction" name="reaction" rows="2" maxlength="350"></textarea>
+              <label for="revision">무엇을 수정했나요?</label><textarea id="revision" name="revision" rows="2" maxlength="350"></textarea>
+              <label for="nextStep">다음에 해볼 일</label><input id="nextStep" name="nextStep" maxlength="220">
+            </fieldset>
+            <div class="form-controls"><button type="submit" class="button button-dark">한 장 저장 / 수정</button><button type="button" class="button button-quiet" id="newButton">새 기록 시작</button></div>
+          </form>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="resultTitle">
+          <div class="panel-head"><span>OUTPUT / 한 장 방향 카드</span><h2 id="resultTitle">이용자에게 이렇게 보여줍니다</h2></div>
+          <div id="empty" class="empty">상단의 <strong>가상 사례 전체 보기</strong>를 누르면 첫 카드와 실행 후 수정 내용을 볼 수 있습니다.</div>
+          <div id="output" hidden>
+            <div class="version-bar" id="versionBar" aria-label="카드 버전"></div>
+            <article class="card">
+              <div class="card-top"><span id="cardTag"></span><span id="cardDate"></span></div>
+              <h3 id="cardName"></h3>
+              <div class="card-block"><span>들은 이야기</span><p id="cardStory"></p></div>
+              <div class="card-block"><span>직접 해본 일</span><p id="cardEvidence"></p></div>
+              <div class="card-block emphasis"><span>근거가 있는 강점 가설</span><div id="cardStrengths"></div><small>본인이 이 해석에 동의하는지 대화로 확인합니다.</small></div>
+              <div class="card-block"><span>중요한 조건과 도울 사람</span><p id="cardPreference"></p><p id="cardAudience"></p></div>
+              <div class="card-block"><span>사회·산업 흐름</span><p id="cardContext"></p><a id="cardSource" target="_blank" rel="noopener noreferrer" hidden></a><small id="cardSourceNote"></small></div>
+              <div class="card-block"><span>가능한 방향과 이유</span><div id="cardDirections"></div></div>
+              <div class="card-block"><span>본인이 고른 방향</span><p id="cardChosen"></p></div>
+              <div class="card-block"><span>20초 자기소개</span><p id="cardIntro"></p></div>
+              <div class="card-block"><span>첫 활동 또는 작은 서비스</span><p id="cardActivity"></p></div>
+              <div class="card-block"><span>처음 알릴 이야기</span><p id="cardContent"></p></div>
+              <div class="card-block"><span>첫 행동과 확인할 반응</span><p id="cardFirstStep"></p><p id="cardQuestion"></p></div>
+              <div class="card-block followup" id="followupBlock" hidden><span>해본 뒤 기록한 반응</span><p id="cardAction"></p><p id="cardReaction"></p><p id="cardRevision"></p><p id="cardNextStep"></p></div>
+              <p class="card-note">입력과 상담자가 작성한 초안을 정리한 결과입니다. 진로·사업 성과를 보장하지 않습니다.</p>
+            </article>
+            <div class="output-actions"><button type="button" class="button button-dark" id="copyButton">카드 복사</button><button type="button" class="button button-outline" id="downloadButton">텍스트 저장</button><button type="button" class="button button-quiet" id="deleteButton">이 기록 삭제</button></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="records" class="records" aria-labelledby="recordsTitle">
+      <div class="records-heading"><div><span class="eyebrow">02 / SAVED WORK</span><h2 id="recordsTitle">이 브라우저의 기록</h2></div><p>한 사람의 첫 카드와 수정 이력을 다시 열 수 있습니다.</p></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="recordList" class="record-list"></div>
+    </section>
+  </main>
+  <footer><div class="footer-logo">P<span>.</span> <small>PROOFLINE</small></div><p>경험에서 강점을, 강점에서 다음 행동을.</p><span>가상 사례 시연 · 이 기기에서만 저장</span></footer>
+</body>
+</html>

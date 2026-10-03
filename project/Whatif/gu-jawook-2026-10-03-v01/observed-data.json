@@ -1,0 +1,48 @@
+{
+  "retrieved": "2026-10-03",
+  "scope": "2024 full regular season; 2026 retrieved season-to-date, not pre-play snapshots",
+  "rows": [
+    {
+      "player": "구자욱",
+      "year": 2024,
+      "G": 129,
+      "PA": 568,
+      "AB": 493,
+      "H": 169,
+      "TB": 309,
+      "HR": 33,
+      "BB": 55,
+      "OBP": 0.417,
+      "SLG": 0.627,
+      "source": "https://www.koreabaseball.com/Record/Player/HitterDetail/Total.aspx?playerId=62404"
+    },
+    {
+      "player": "구자욱",
+      "year": 2026,
+      "G": 114,
+      "PA": 497,
+      "AB": 420,
+      "H": 156,
+      "TB": 244,
+      "HR": 15,
+      "BB": 66,
+      "OBP": 0.458,
+      "SLG": 0.581,
+      "source": "https://www.koreabaseball.com/Record/Player/HitterDetail/Total.aspx?playerId=62404"
+    },
+    {
+      "player": "김헌곤",
+      "year": 2026,
+      "G": 77,
+      "PA": 101,
+      "AB": 94,
+      "H": 26,
+      "TB": 34,
+      "HR": 1,
+      "BB": 6,
+      "OBP": 0.317,
+      "SLG": 0.362,
+      "source": "https://www.koreabaseball.com/Record/Player/HitterDetail/Total.aspx?playerId=61404"
+    }
+  ]
+}

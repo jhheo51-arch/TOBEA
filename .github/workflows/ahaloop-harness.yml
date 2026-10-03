@@ -3,16 +3,16 @@ name: AHALOOP harness
 on:
   pull_request:
     paths:
-      - "ahaloop/**"
+      - "project/ahaloop/**"
       # main requires this real integration check for MEMOIVE PRs as well.
-      - "memoive/**"
-      - "proofline/**"
+      - "project/memoive/**"
+      - "project/proofline/**"
       - ".github/workflows/ahaloop-*.yml"
   push:
     branches: [main, "codex/**"]
     paths:
-      - "ahaloop/**"
-      - "proofline/**"
+      - "project/ahaloop/**"
+      - "project/proofline/**"
       - ".github/workflows/ahaloop-*.yml"
   workflow_dispatch:
 
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ahaloop
+        working-directory: project/ahaloop
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: ahaloop/package-lock.json
+          cache-dependency-path: project/ahaloop/package-lock.json
       - run: npm ci
       - run: npm run harness:pass
 
