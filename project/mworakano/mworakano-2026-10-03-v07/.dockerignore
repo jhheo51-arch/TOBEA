@@ -1,0 +1,10 @@
+*
+!Dockerfile
+!package.json
+!server.mjs
+!public/
+!public/**
+!prompts/
+!prompts/**
+!skills/
+!skills/**
