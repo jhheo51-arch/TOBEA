@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: project/mworakano/mworakano-2026-10-03-v07
+        working-directory: project/mworakano/mworakano-2026-10-03-v08
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
