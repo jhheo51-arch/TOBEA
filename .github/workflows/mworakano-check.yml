@@ -1,0 +1,27 @@
+name: Mworakano checks
+on:
+  pull_request:
+    paths:
+      - 'project/mworakano/**'
+      - '.github/workflows/mworakano-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'project/mworakano/**'
+      - '.github/workflows/mworakano-check.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: project/mworakano/mworakano-2026-10-03-v08
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check server.mjs
+      - run: node --check public/app.js
+      - run: npm test

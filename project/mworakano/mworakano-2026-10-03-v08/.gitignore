@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+private/
+
+dist/
+.sites-runtime/
+*.tar.gz
+*-preview.png

@@ -1,0 +1,14 @@
+.env
+**/.env
+**/.env.*
+!**/.env.example
+**/*.log
+**/*.pid
+**/private/
+**/node_modules/
+**/*backup*.json
+**/*.wav
+**/*.mp3
+**/*.webm
+**/*.m4a
+**/*.mp4
